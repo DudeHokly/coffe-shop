@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Carlito", sans-serif;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+.header {
+  width: 1200px;
+}
+.NavMenuBlock {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.NavMenu {
+  display: flex;
+}
+.logo {
+}
+.elemMainPage:not(:last-child) {
+  margin: 0 21px 0 0;
+}
+.elemCoffe {
+  width: 1200px;
+  height: fit-content;
+  margin: 5px 0;
+  background-color: #c39b73;
+}

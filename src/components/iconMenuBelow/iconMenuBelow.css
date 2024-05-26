@@ -1,0 +1,19 @@
+.iconBlockBelow {
+  display: flex;
+  justify-content: center;
+  margin: 70px 0 10px;
+}
+.btnBelowMenu:not(:last-child) {
+  margin: 0 44px;
+}
+.btnBelowMenu {
+  padding: 20px 45px;
+  border: 1px solid #c39b73;
+  border-radius: 30px;
+  color: white;
+  background-color: #252525;
+  transition: all 0.4s;
+}
+.btnBelowMenu:hover {
+  background-color: #c39b73;
+}
