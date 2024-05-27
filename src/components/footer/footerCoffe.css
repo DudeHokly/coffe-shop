@@ -1,0 +1,138 @@
+.FooterSection {
+  color: #c39b73;
+  border-top: 1px solid white;
+  padding: 82px 0 0;
+  background-color: #252525;
+}
+.conteinerFooter {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.contentgDiv {
+  display: flex;
+  margin-bottom: 65px;
+  line-height: 185%;
+}
+.ball {
+  color: #c39b73;
+  font-size: 270px;
+  line-height: 0;
+  animation: prig 2s alternate infinite;
+}
+.footerLeft_icon {
+  position: absolute;
+  left: 0;
+}
+.footerRight_icon {
+  position: absolute;
+  right: 0;
+}
+.rowFooter {
+  display: flex;
+  flex-wrap: wrap;
+}
+.CardFooter {
+  padding: 0 15px;
+}
+.footer__navigation {
+  display: flex;
+  height: 185px;
+  gap: 30px;
+}
+.aboutCard ul {
+  list-style-type: none;
+}
+
+.spisokFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.aboutCard li {
+}
+.padAbout1 p {
+  margin: 0 0 18px;
+  color: #c39b73;
+  font-weight: 300;
+}
+.aboutCard a {
+  color: #c39b73;
+  text-decoration: none;
+  font-size: 18px;
+}
+.logo {
+  padding: 0 0 20px;
+}
+.logo i {
+  color: white;
+  font-size: 120px;
+}
+.BottomCopiright {
+  border-top: 1px solid white;
+  text-align: center;
+}
+.footIcons {
+  display: flex;
+}
+.footIcons li {
+  margin: 0 10px 0 0;
+}
+.footIcons i {
+  display: flex;
+  color: #c39b73;
+  font-size: 24px;
+  transition: all 0.5s;
+}
+.footIcons i:hover {
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
+}
+.aboutCard h6 {
+  color: white;
+  font-size: 28px;
+  margin: 0 0 16px;
+}
+.padSpan {
+  margin: 0 0 10px;
+}
+.BottomCopiright {
+  padding: 23px 0;
+}
+
+@keyframes prig {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+@media screen and (max-width: 990px) {
+  .padAbout2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 759px) {
+  .padAbout5 {
+    display: none;
+  }
+}
+@media screen and (max-width: 521px) {
+  .contentgDiv {
+    display: block;
+    text-align: center;
+  }
+  .aboutCard {
+    padding: 0 0 70px;
+  }
+  .aboutCard.padAbout1 {
+    display: flex;
+    font-size: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

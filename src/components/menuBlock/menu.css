@@ -29,8 +29,6 @@ img {
 .NavMenu {
   display: flex;
 }
-.logo {
-}
 .elemMainPage:not(:last-child) {
   margin: 0 21px 0 0;
 }
