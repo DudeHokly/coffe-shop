@@ -1,6 +1,6 @@
 import "./footerCoffe.css";
-import SportsBasketballIcon from "@mui/icons-material/SportsBasketball";
 import BakeryDiningIcon from "@mui/icons-material/BakeryDining";
+import EmojiFoodBeverageIcon from "@mui/icons-material/EmojiFoodBeverage";
 import "../../icons/css/fontello.css";
 
 export default function FooterCoffe() {
@@ -8,15 +8,15 @@ export default function FooterCoffe() {
     <section className="FooterSection">
       <div className="ball _placeIcon">
         <figure className="footerLeft_icon">
-          <i className="#">
-            <BakeryDiningIcon />
+          <i className="kursan">
+            <BakeryDiningIcon style={{ fontSize: 300 }} />
           </i>
         </figure>
       </div>
       <div className="ball _placeIcon">
         <figure className="footerRight_icon">
-          <i className="#">
-            <BakeryDiningIcon />
+          <i className="kursan">
+            <BakeryDiningIcon style={{ fontSize: 300 }} />
           </i>
         </figure>
       </div>
@@ -27,7 +27,7 @@ export default function FooterCoffe() {
               <figure className="logo">
                 <a href="#">
                   <i className="logoFooterPage">
-                    <SportsBasketballIcon fontSize="120px" color="white" />
+                    <EmojiFoodBeverageIcon fontSize="120px" color="white" />
                   </i>
                 </a>
               </figure>

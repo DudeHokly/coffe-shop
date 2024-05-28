@@ -19,10 +19,7 @@ const coffeeSlider = {
 export default function ScrollElem() {
   return (
     <section className="scrollElemBlock">
-      <div className="_conteiner">
-        <h1>Кофейный Магазин</h1>
-        <h3>Наслаждайтесь Своим Кофе Весь День</h3>
-        <a className="btnShop">Купить</a>
+      <div className="justPaddingScroll">
         <Flickity
           className="slider"
           elementType="div"
@@ -31,22 +28,25 @@ export default function ScrollElem() {
           reloadOnUpdate
           static
         >
-          {coffeeSlider["id"].map((index) => {
+          {coffeeSlider.id.map((index) => {
             return (
               <div key={index} className="elemCoffe">
-                <>
-                  <h2>{coffeeSlider["title"][index - 1]}</h2>
-                  <div
-                    style={{
-                      backgroundImage: `url(${
-                        coffeeSlider["images"][index - 1]
-                      })`,
-                      width: "100%",
-                      height: 500,
-                      backgroundSize: "cover",
-                    }}
-                  ></div>
-                </>
+                <div
+                  style={{
+                    backgroundImage: `url(${coffeeSlider.images[index - 1]})`,
+                    width: "100%",
+                    height: 700,
+                    backgroundSize: "cover",
+                  }}
+                  className="imgScrollElem"
+                >
+                  <h2 className="scrollName">
+                    {coffeeSlider.title[index - 1]}
+                  </h2>
+                  <h1>Кофейный Магазин</h1>
+                  <h3>Наслаждайтесь Своим Кофе Весь День</h3>
+                </div>
+                <a className="btnShop">Купить</a>
               </div>
             );
           })}

@@ -9,34 +9,57 @@ export default function MainMenu() {
     <header classname="header">
       <div classname="menu">
         <div className="NavMenuBlock">
-          <figure className="logo">
-            <a>
+          <figure className="logoMainCoffe">
+            <a href="#">
               <i className="logoMainPage">
-                <EmojiFoodBeverageIcon fontSize="100px" />
+                <EmojiFoodBeverageIcon style={{ fontSize: 70 }} />
               </i>
             </a>
           </figure>
-          <ul className="NavMenu">
-            <li className="elemMainPage">ГЛАВНАЯ</li>
-            <li className="elemMainPage">НАПИТКИ</li>
-            <li className="elemMainPage">ЭСПРЕССО</li>
-            <li className="elemMainPage">БОЛЬШЕ</li>
-            <li className="elemMainPage">БЛОГ</li>
-          </ul>
-          <figure className="profile">
-            <a>
-              <i className="logoMainPage">
-                <AccountCircleIcon />
-              </i>
-            </a>
-          </figure>
-          <figure className="bin">
-            <a>
-              <i className="logoMainPage">
-                <CabinIcon />
-              </i>
-            </a>
-          </figure>
+          <nav className="navBlock">
+            <ul className="NavMenu">
+              <li className="elemMainPage">
+                <a href="#">ГЛАВНАЯ</a>
+              </li>
+              <li className="elemMainPage">
+                <a href="#">НАПИТКИ</a>
+                <ul className="DopWindow">
+                  <li className="DopElemMainPage">Цены</li>
+                  <li className="DopElemMainPage">Узнать больше</li>
+                </ul>
+              </li>
+              <li className="elemMainPage">
+                <a href="#">ЭСПРЕССО</a>
+                <ul className="DopWindow">
+                  <li className="DopElemMainPage">Холодный</li>
+                  <li className="DopElemMainPage">Горячий</li>
+                  <li className="DopElemMainPage">Теплый</li>
+                </ul>
+              </li>
+              <li className="elemMainPage">
+                <a href="#">БОЛЬШЕ</a>
+                <ul className="DopWindow">
+                  <li className="DopElemMainPage">Цены</li>
+                  <li className="DopElemMainPage">Узнать больше</li>
+                </ul>
+              </li>
+              <li className="elemMainPage">
+                <a href="#">БЛОГ</a>
+              </li>
+              <li className="iconsMainPage">
+                <a href="#">
+                  <i className="profile">
+                    <AccountCircleIcon style={{ fontSize: 26 }} />
+                  </i>
+                </a>
+                <a href="#">
+                  <i className="bin">
+                    <CabinIcon style={{ fontSize: 26 }} />
+                  </i>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
         <ScrollElem />
       </div>

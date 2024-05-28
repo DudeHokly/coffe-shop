@@ -16,7 +16,6 @@
 }
 .ball {
   color: #c39b73;
-  font-size: 270px;
   line-height: 0;
   animation: prig 2s alternate infinite;
 }

@@ -8,47 +8,49 @@ import CakeIcon from "@mui/icons-material/Cake";
 export default function SubscriveModule() {
   return (
     <section className="SubBlock">
-      <h3 className="ПОДПИСЫВАЙТЕСЬ НА НАШИ НОВОВСТИ"></h3>
-      <ul className="subIconsBlock">
-        <li>
-          <i className="iconSub">
-            <SportsBasketballIcon />
-          </i>
-        </li>
-        <li>
-          <i className="iconSub">
-            <SportsMartialArtsIcon />
-          </i>
-        </li>
-        <li>
-          <i className="iconSub">
-            <TelegramIcon />
-          </i>
-        </li>
-        <li>
-          <i className="iconSub">
-            <YouTubeIcon />
-          </i>
-        </li>
-        <li>
-          <i className="iconSub">
-            <CakeIcon />
-          </i>
-        </li>
-      </ul>
-      <form className="Contactform">
-        <input
-          className="ContactInput"
-          type="Email"
-          name="Email"
-          placeholder="Введите ваш Email"
-        />
-        <span className="btn_Contact">
-          <a to="/" className="ContactJoinLink">
-            Отправить
-          </a>
-        </span>
-      </form>
+      <div className="SubBlockContent _conteiner">
+        <h3 className="textSub">ПОДПИСЫВАЙТЕСЬ НА НАШИ НОВОВСТИ</h3>
+        <ul className="subIconsBlock">
+          <li>
+            <a href="#" className="iconSub">
+              <SportsBasketballIcon style={{ fontSize: 35 }} />
+            </a>
+          </li>
+          <li>
+            <a href="#" className="iconSub">
+              <SportsMartialArtsIcon style={{ fontSize: 35 }} />
+            </a>
+          </li>
+          <li>
+            <a href="#" className="iconSub">
+              <TelegramIcon style={{ fontSize: 35 }} />
+            </a>
+          </li>
+          <li>
+            <a href="#" className="iconSub">
+              <YouTubeIcon style={{ fontSize: 35 }} />
+            </a>
+          </li>
+          <li>
+            <a href="#" className="iconSub">
+              <CakeIcon style={{ fontSize: 35 }} />
+            </a>
+          </li>
+        </ul>
+        <form className="Contactform">
+          <input
+            className="ContactInput"
+            type="Email"
+            name="Email"
+            placeholder="Введите ваш Email"
+          />
+          <span className="btn_Contact">
+            <a href="#" to="/" className="ContactJoinLink">
+              Отправить
+            </a>
+          </span>
+        </form>
+      </div>
     </section>
   );
 }

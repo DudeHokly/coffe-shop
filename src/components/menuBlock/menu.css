@@ -1,8 +1,6 @@
 *,
 *::after,
 *::before {
-  padding: 0;
-  margin: 0;
   border: 0;
   font-family: "Carlito", sans-serif;
   box-sizing: border-box;
@@ -20,21 +18,116 @@ img {
 }
 .header {
   width: 1200px;
+  padding-top: 20px;
+}
+.menu {
+}
+._conteiner {
+  margin: 0 auto;
+  max-width: 1200px;
+  box-sizing: content-box;
+}
+.navBlock {
+  margin: 0 0 0 50px;
+}
+.logoMainCoffe {
+  display: flex;
+  align-items: center;
 }
 .NavMenuBlock {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
 }
 .NavMenu {
   display: flex;
 }
 .elemMainPage:not(:last-child) {
-  margin: 0 21px 0 0;
+  margin: 0 27px 0 0;
 }
 .elemCoffe {
-  width: 1200px;
-  height: fit-content;
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-position: center;
   margin: 5px 0;
   background-color: #c39b73;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.elemMainPage {
+  font-size: 18px;
+  transition: all 0.4s;
+}
+.elemMainPage:hover {
+  color: #c39b73;
+}
+.DopWindow:hover {
+  transition: all 0.6s;
+  border-radius: 12px;
+  background-color: #c39b73;
+}
+.DopWindow {
+  position: absolute;
+  text-align: center;
+  display: none;
+  padding: 8px;
+  color: #c39b73;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  top: 30px;
+}
+.DopWindow:hover {
+  transition: all 0.6s;
+  border-radius: 12px;
+  background-color: #252525;
+}
+.elemMainPage:hover > ul {
+  transition: all 0.6s;
+  display: initial;
+}
+.iconsMainPage a {
+  transition: color 0.4s;
+  font-size: 18px;
+}
+
+.iconsMainPage a:hover {
+  color: #c39b73;
+}
+
+.scrollElemBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.justPaddingScroll {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btnShop {
+  margin-top: -400px;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  background-color: #252525;
+  color: #fff;
+  border-radius: 7px;
+}
+.slider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.scrollName {
+  margin-bottom: 10px;
+  font-size: 1.5em;
 }

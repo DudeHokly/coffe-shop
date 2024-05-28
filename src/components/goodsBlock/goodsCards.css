@@ -1,5 +1,62 @@
+.cardsGoods {
+  padding: 45px 0;
+}
+.padBlockGoods {
+  text-align: center;
+}
+.goodsText1 {
+}
 .CardsGoodsJsx {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
+}
+.Carta {
+  background-color: #252525;
+  border-radius: 3px;
+  padding-bottom: 10px;
+}
+.textRowGoods {
+  padding: 20px 0;
+  line-height: 200%;
+}
+.upPartText {
+  margin-bottom: 40px;
+  line-height: 185%;
+}
+.goodsText1 {
+  font-size: 28px;
+}
+.textGoods {
+  color: white;
+  font-size: 18px;
+}
+.colorChangeGoods {
+  color: #c39b73;
+}
+.priceGoods {
+  font-size: 20px;
+  font-weight: 600;
+}
+.addBtn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  background-color: #c39b73;
+  color: #fff;
+  border-radius: 7px;
+  transition: all 0.6s;
+}
+.addBtn:hover {
+  background-color: #252525;
+  color: #c39b73;
+  border: 1px solid white;
+}
+.elemLine {
+  padding-top: 10px;
+}
+.line {
+  margin: 10px;
+  border-top: 2px dotted #c39b73;
 }
