@@ -14,10 +14,10 @@ export default function App() {
       <MainMenu />
       <IcnsBelow />
       <GoodsCards />
-      <Testimonials />
       <SubscriveModule />
       <CoffeVarieties />
       <OurTeam />
+      <Testimonials />
       <FooterCoffe />
     </div>
   );

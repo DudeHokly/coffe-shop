@@ -22,6 +22,10 @@ const coffeCardVarieties = [
     titleCoffe: "Black Coffe",
   },
   {
+    picture: black,
+    titleCoffe: "Black Coffe",
+  },
+  {
     picture: milk,
     titleCoffe: "Milk Coffe",
   },
@@ -34,28 +38,43 @@ const coffeCardVarieties = [
     picture: late,
     titleCoffe: "Latte Coffe",
   },
+  {
+    picture: milk,
+    titleCoffe: "Milk Coffe1",
+  },
+  {
+    picture: black,
+    titleCoffe: "Black Coffe",
+  },
+  {
+    picture: black,
+    titleCoffe: "Black Coffe",
+  },
 ];
 
 const generCards = coffeCardVarieties.map((elem, i) => {
   if (elem.dudeImage) {
     return <VarietiesSpecialCard elem={elem} />;
+  } else {
+    return <VarietiesCards elem={elem} />;
   }
-  return <VarietiesCards elem={elem} />;
 });
 
 function VarietiesCards({ elem }) {
-  <div className="blockCard">
-    <figure className="topPictureCoffe">
-      <img
-        src={elem.picture}
-        alt="Фото Коффе"
-        className="pictureCoffeVarities"
-      ></img>
-    </figure>
-    <div className="textVaritiesBelow">
-      <p className="textBelow1">{elem.titleCoffe}</p>
+  return (
+    <div className="blockCard">
+      <figure className="topPictureCoffe">
+        <img
+          src={elem.picture}
+          alt="Фото Коффе"
+          className="pictureCoffeVarities"
+        ></img>
+      </figure>
+      <div className="textVaritiesBelow">
+        <p className="textBelow1">{elem.titleCoffe}</p>
+      </div>
     </div>
-  </div>;
+  );
 }
 
 function VarietiesSpecialCard({ elem }) {

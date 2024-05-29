@@ -1,8 +1,17 @@
+.slider {
+  background-image: url(../../imges/bgTestimon.png);
+  background-position: center;
+}
+.testimText1 {
+  color: #c39b73;
+}
+.forColorTestim {
+  color: #c39b73;
+}
 .elemTestimonials {
   width: 800px;
   height: fit-content;
   margin: 5px 0;
-  background-color: #c39b73;
 }
 .limit {
   width: 1200px;

@@ -26,41 +26,49 @@ const testimonialsSlider = {
 export default function Testimonials() {
   return (
     <section className="testimonials">
-      <h1 className="goodsText1">ОТЗЫВЫ</h1>
-      <div className="elemLine limit">
-        <div className="line"></div>
-        <div className="line"></div>
-        <EmojiFoodBeverageIcon style={{ fontSize: 32 }} />
-      </div>
-      <p className="testimonialsText"></p>
-      <Flickity
-        className="slider"
-        elementType="div"
-        disableImagesLoaded={false}
-        options={flickityOptions}
-        reloadOnUpdate
-        static
-      >
-        {testimonialsSlider["id"].map((index) => {
-          return (
-            <div key={index} className="elemTestimonials">
-              <>
-                <h2>{testimonialsSlider["title"][index - 1]}</h2>
+      <div className="TestimonialsContent _conteiner">
+        <h1 className="goodsText1 testimText1">ОТЗЫВЫ</h1>
+        <div className="elemLine limit">
+          <div className="line"></div>
+          <div className="line"></div>
+          <EmojiFoodBeverageIcon
+            style={{ fontSize: 32 }}
+            className="forColorTestim"
+          />
+        </div>
+        <Flickity
+          className="slider"
+          elementType="div"
+          disableImagesLoaded={false}
+          options={flickityOptions}
+          reloadOnUpdate
+          static
+        >
+          {testimonialsSlider.id.map((index) => {
+            return (
+              <div key={index} className="elemTestimonials">
+                <p className="testimonialsText">
+                  {testimonialsSlider.desc[index - 1]}
+                </p>
                 <div
                   style={{
                     backgroundImage: `url(${
-                      testimonialsSlider["images"][index - 1]
+                      testimonialsSlider.images[index - 1]
                     })`,
-                    width: "100%",
-                    height: 500,
+                    width: "100px",
+                    height: 100,
                     backgroundSize: "cover",
                   }}
+                  className="imgScrollElem"
                 ></div>
-              </>
-            </div>
-          );
-        })}
-      </Flickity>
+                <h2 className="scrollName">
+                  {testimonialsSlider.title[index - 1]}
+                </h2>
+              </div>
+            );
+          })}
+        </Flickity>
+      </div>
     </section>
   );
 }
