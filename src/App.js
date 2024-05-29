@@ -5,6 +5,7 @@ import GoodsCards from "./components/goodsBlock/goodsCards";
 import Testimonials from "./components/TESTIMONIALS/testimonials";
 import SubscriveModule from "./components/subscribe/sub";
 import CoffeVarieties from "./components/coffee varieties/varieties";
+import OurTeam from "./components/ourTeam/ourTeam";
 import FooterCoffe from "./components/footer/footerCoffe";
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
       <Testimonials />
       <SubscriveModule />
       <CoffeVarieties />
+      <OurTeam />
       <FooterCoffe />
     </div>
   );

@@ -1,0 +1,63 @@
+.goodsText1 {
+  text-align: center;
+}
+.elemLine {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.ContentCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+.Card {
+  text-align: center;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  background-color: #252525;
+  cursor: pointer;
+}
+.forPhotoDude {
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.forPhotoDude:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
+}
+.photoBarista {
+  height: 350px;
+  width: auto;
+}
+.textBelowBarista {
+  line-height: 170%;
+}
+.titleBarista {
+  margin-top: 20px;
+  font-size: 23px;
+  color: white;
+}
+.jobTitleBarista {
+  font-weight: 600;
+  color: #c39b73;
+}
+.iconsBlockBarista {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 25px;
+}
+.iconTeam {
+  border: 2px solid white;
+  color: #252525;
+  border-radius: 100%;
+  background: #c39b73;
+  aspect-ratio: 1 / 1;
+  padding: 6px;
+  transition: all 0.4s;
+}
+.iconTeam:hover {
+  color: #c39b73;
+  background: white;
+}

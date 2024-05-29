@@ -26,10 +26,12 @@ const testimonialsSlider = {
 export default function Testimonials() {
   return (
     <section className="testimonials">
-      <h2 className="titleTestimonials">ОТЗЫВЫ</h2>
-      <i className="TestimonialIcon">
-        <EmojiFoodBeverageIcon />
-      </i>
+      <h1 className="goodsText1">ОТЗЫВЫ</h1>
+      <div className="elemLine limit">
+        <div className="line"></div>
+        <div className="line"></div>
+        <EmojiFoodBeverageIcon style={{ fontSize: 32 }} />
+      </div>
       <p className="testimonialsText"></p>
       <Flickity
         className="slider"

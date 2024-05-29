@@ -10,7 +10,6 @@ import latte from "../../imges/Goods/latteGoods.jpg";
 import brevia from "../../imges/Goods/breviaGoods.jpg";
 import fredo from "../../imges/Goods/fredoGoods.jpg";
 import makima from "../../imges/Goods/makkimaGoods.jpg";
-import { red } from "@mui/material/colors";
 
 const goods = [
   {

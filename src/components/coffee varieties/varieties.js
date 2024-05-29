@@ -5,6 +5,7 @@ import black from "../../imges/black.jpg";
 import milk from "../../imges/milkCoffe.jpg";
 import late from "../../imges/latteVarities.jpg";
 import mocha from "../../imges/mocha.jpg";
+import EmojiFoodBeverageIcon from "@mui/icons-material/EmojiFoodBeverage";
 
 const coffeCardVarieties = [
   {
@@ -77,10 +78,17 @@ function VarietiesSpecialCard({ elem }) {
 export default function CoffeVarieties() {
   return (
     <section className="varieties">
-      <div className="textVarities">
-        <h2 className="#">Наши сорта Кофе</h2>
+      <div className="ContentVarities _conteiner">
+        <div className="textVarities">
+          <h1 className="goodsText1">Наши сорта Кофе</h1>
+          <div className="elemLine limit">
+            <div className="line"></div>
+            <div className="line"></div>
+            <EmojiFoodBeverageIcon style={{ fontSize: 32 }} />
+          </div>
+        </div>
+        <div className="cardsVarities">{generCards}</div>
       </div>
-      <div className="cardsVarities">{generCards}</div>
     </section>
   );
 }
