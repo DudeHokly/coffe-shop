@@ -27,7 +27,7 @@ export default function Testimonials() {
   return (
     <section className="testimonials">
       <div className="TestimonialsContent _conteiner">
-        <h1 className="goodsText1 testimText1">ОТЗЫВЫ</h1>
+        <h1 className="goodsText1">ОТЗЫВЫ</h1>
         <div className="elemLine limit">
           <div className="line"></div>
           <div className="line"></div>

@@ -25,7 +25,7 @@ export default function MainMenu() {
                 <a href="#">НАПИТКИ</a>
                 <ul className="DopWindow">
                   <li className="DopElemMainPage">Цены</li>
-                  <li className="DopElemMainPage">Узнать больше</li>
+                  <li className="DopElemMainPage">Больше</li>
                 </ul>
               </li>
               <li className="elemMainPage">
@@ -40,7 +40,7 @@ export default function MainMenu() {
                 <a href="#">БОЛЬШЕ</a>
                 <ul className="DopWindow">
                   <li className="DopElemMainPage">Цены</li>
-                  <li className="DopElemMainPage">Узнать больше</li>
+                  <li className="DopElemMainPage">Больше</li>
                 </ul>
               </li>
               <li className="elemMainPage">
@@ -49,12 +49,12 @@ export default function MainMenu() {
               <li className="iconsMainPage">
                 <a href="#">
                   <i className="profile">
-                    <AccountCircleIcon style={{ fontSize: 26 }} />
+                    <AccountCircleIcon style={{ fontSize: 28 }} />
                   </i>
                 </a>
                 <a href="#">
                   <i className="bin">
-                    <CabinIcon style={{ fontSize: 26 }} />
+                    <CabinIcon style={{ fontSize: 28 }} />
                   </i>
                 </a>
               </li>

@@ -6,21 +6,29 @@ import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 export default function IcnsBelow() {
   return (
     <section className="iconBlockBelow">
-      <a className="btnBelowMenu">
-        <LocalShippingIcon />
-        <p>БЕСПЛАТНАЯ ДОСТАВКА ТОВАРОВ</p>
-        <p>Для всех заказов на сумму более 3000р</p>
-      </a>
-      <a className="btnBelowMenu">
-        <PaymentsIcon />
-        <p>ОПЛАТА ПРИ ДОСТАВКЕ</p>
-        <p>100% гарантия возврата денег</p>
-      </a>
-      <a className="btnBelowMenu">
-        <AddIcCallIcon />
-        <p>ПОМОЩЬ И ПОДДЕРЖКА</p>
-        <p>Позвоните нам: +(7)993-24-55-55</p>
-      </a>
+      <div className="ContetntIconPage">
+        <a className="btnBelowMenu">
+          <LocalShippingIcon style={{ fontSize: 32 }} />
+          <div className="textIconMenu">
+            <p>БЕСПЛАТНАЯ ДОСТАВКА ТОВАРОВ</p>
+            <p>Для всех заказов более 3000р</p>
+          </div>
+        </a>
+        <a className="btnBelowMenu">
+          <PaymentsIcon style={{ fontSize: 32 }} />
+          <div className="textIconMenu">
+            <p>ОПЛАТА ПРИ ДОСТАВКЕ</p>
+            <p>100% гарантия возврата денег</p>
+          </div>
+        </a>
+        <a className="btnBelowMenu">
+          <AddIcCallIcon style={{ fontSize: 32 }} />
+          <div className="textIconMenu">
+            <p>ПОМОЩЬ И ПОДДЕРЖКА</p>
+            <p>Позвоните: +(7)993-24-55-55</p>
+          </div>
+        </a>
+      </div>
     </section>
   );
 }

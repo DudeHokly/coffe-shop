@@ -25,11 +25,14 @@
   line-height: 185%;
 }
 .goodsText1 {
-  font-size: 28px;
+  font-size: 34px;
+  color: #252525;
+  font-weight: 500;
 }
 .textGoods {
   color: white;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: 500;
 }
 .colorChangeGoods {
   color: #c39b73;
@@ -58,5 +61,5 @@
 }
 .line {
   margin: 10px;
-  border-top: 2px dotted #c39b73;
+  border-top: 2px dotted #252525;
 }

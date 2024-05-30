@@ -1,10 +1,14 @@
 import "./varieties.css";
-import americano from "../../imges/amricanoVarities.jpg";
-import espresso from "../../imges/espressoVarities.jpg";
-import black from "../../imges/black.jpg";
-import milk from "../../imges/milkCoffe.jpg";
-import late from "../../imges/latteVarities.jpg";
-import mocha from "../../imges/mocha.jpg";
+import americano from "../../imges/varities/americanoC.jpg";
+import espresso from "../../imges/varities/espressoC.jpg";
+import mocha from "../../imges/varities/mocchaC.jpg";
+import late from "../../imges/varities/latteC.jpg";
+import black from "../../imges/varities/blackC.jpg";
+import milk from "../../imges/varities/milkC.jpg";
+import ristretto from "../../imges/varities/ristretto.jpg";
+import makiatto from "../../imges/varities/makiatto.jpg";
+import raf from "../../imges/varities/rafC.jpg";
+import Giga from "../../imges/varities/GigaC.jpg";
 import EmojiFoodBeverageIcon from "@mui/icons-material/EmojiFoodBeverage";
 
 const coffeCardVarieties = [
@@ -15,11 +19,11 @@ const coffeCardVarieties = [
   {
     picture: espresso,
     titleCoffe: "Espresso Coffe",
-    dudeImage: true,
   },
   {
-    picture: black,
-    titleCoffe: "Black Coffe",
+    picture: raf,
+    titleCoffe: "Raf Coffe",
+    dudeImage: true,
   },
   {
     picture: black,
@@ -32,23 +36,23 @@ const coffeCardVarieties = [
   {
     picture: mocha,
     titleCoffe: "Moccha Coffe",
-    dudeImage: true,
   },
   {
     picture: late,
     titleCoffe: "Latte Coffe",
   },
   {
-    picture: milk,
-    titleCoffe: "Milk Coffe1",
+    picture: Giga,
+    titleCoffe: "Giga Coffe",
+    dudeImage: true,
   },
   {
-    picture: black,
-    titleCoffe: "Black Coffe",
+    picture: ristretto,
+    titleCoffe: "Ristretto Coffe",
   },
   {
-    picture: black,
-    titleCoffe: "Black Coffe",
+    picture: makiatto,
+    titleCoffe: "Makiatto Coffe",
   },
 ];
 
@@ -80,11 +84,11 @@ function VarietiesCards({ elem }) {
 function VarietiesSpecialCard({ elem }) {
   return (
     <div className="blockCard">
-      <figure className="topPictureCoffe">
+      <figure className="topPictureSpecialCoffe">
         <img
           src={elem.picture}
           alt="Фото Коффе"
-          className="pictureCoffeVarities"
+          className="pictureCoffeSpecialVarities"
         ></img>
       </figure>
       <div className="textVaritiesBelow">
