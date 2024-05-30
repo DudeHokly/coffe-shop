@@ -37,7 +37,7 @@ export default function Testimonials() {
           />
         </div>
         <Flickity
-          className="slider"
+          className="sliderTestim"
           elementType="div"
           disableImagesLoaded={false}
           options={flickityOptions}
