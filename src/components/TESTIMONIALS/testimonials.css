@@ -1,14 +1,53 @@
-.sliderTestim {
-  background-image: url(../../imges/bgTestimon.png);
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 70px 0 100px;
+  background-color: #f9f9f9;
+  background-image: url(../../imges/bgTestim.jpg);
   background-position: center;
-}
-
-.elemTestimonials {
-  width: 800px;
-  height: fit-content;
-  margin: 5px 0;
-}
-.limit {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
+}
+.testimonials {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.elemTestimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #252525;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.elemTestimonials:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.ContentTestim {
+  text-align: center;
+}
+.imgScrollElemTestim {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 60px auto 20px;
+}
+.testimonialsText {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #c39b73;
+}
+.scrollNameTestim {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #c39b73;
 }

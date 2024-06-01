@@ -1,5 +1,6 @@
 import "./App.css";
 import MainMenu from "./components/menuBlock/menu";
+import ElemCoffeName from "./components/elemNameCoffe/elemNameCof";
 import IcnsBelow from "./components/iconMenuBelow/iconMenuBelow";
 import GoodsCards from "./components/goodsBlock/goodsCards";
 import Testimonials from "./components/TESTIMONIALS/testimonials";
@@ -17,6 +18,7 @@ export default function App() {
       <SubscriveModule />
       <CoffeVarieties />
       <OurTeam />
+      <ElemCoffeName />
       <Testimonials />
       <FooterCoffe />
     </div>
