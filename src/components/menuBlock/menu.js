@@ -86,7 +86,7 @@ export default function MainMenu() {
                           className="btnRemoveGoods"
                           onClick={() => removeFromCart(item.id)}
                         >
-                          Remove
+                          Удалить
                         </button>
                       </div>
                     </div>
