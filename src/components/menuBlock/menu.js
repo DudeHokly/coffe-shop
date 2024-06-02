@@ -2,9 +2,13 @@ import "./menu.css";
 import ScrollElem from "./scrollElem";
 import EmojiFoodBeverageIcon from "@mui/icons-material/EmojiFoodBeverage";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import CabinIcon from "@mui/icons-material/Cabin";
+import { FaCartShopping } from "react-icons/fa6";
+import { useState } from "react";
+// import { useCart } from "../globalShop/CartContext";
 
 export default function MainMenu() {
+  let [shopOpen, setShopOpen] = useState(false);
+  // const { cart, removeFromCart } = useCart();
   return (
     <header classname="header">
       <div classname="menu">
@@ -49,16 +53,21 @@ export default function MainMenu() {
               <li className="iconsMainPage">
                 <a href="#">
                   <i className="profile">
-                    <AccountCircleIcon style={{ fontSize: 28 }} />
+                    <AccountCircleIcon style={{ fontSize: 29 }} />
                   </i>
                 </a>
                 <a href="#">
                   <i className="bin">
-                    <CabinIcon style={{ fontSize: 28 }} />
+                    <FaCartShopping
+                      className={`shop ${shopOpen && "active"}`}
+                      style={{ fontSize: 27 }}
+                      onClick={() => setShopOpen((shopOpen = !shopOpen))}
+                    />
                   </i>
                 </a>
               </li>
             </ul>
+            {shopOpen && <div className="shopCard"></div>}
           </nav>
         </div>
         <ScrollElem />

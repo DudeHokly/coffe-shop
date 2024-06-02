@@ -13,6 +13,7 @@ import makima from "../../imges/Goods/makkimaGoods.jpg";
 
 const goods = [
   {
+    id: 1,
     img: korreto,
     title: "Эспрессо",
     grade: [
@@ -25,30 +26,35 @@ const goods = [
     price: "400р",
   },
   {
+    id: 2,
     img: mokko,
     title: "Доппио",
     grade: [<GradeIcon />, <GradeIcon />, <GradeIcon />],
     price: "700р",
   },
   {
+    id: 3,
     img: romano,
     title: "Латте",
     grade: [<GradeIcon />, <GradeIcon />, <GradeIcon />, <GradeIcon />],
     price: "350р",
   },
   {
+    id: 4,
     img: espresso,
     title: "Бревэ",
     grade: [<GradeIcon />, <GradeIcon />, <GradeIcon />, <GradeIcon />],
     price: "1000р",
   },
   {
+    id: 5,
     img: doppio,
     title: "Фредо",
     grade: [<GradeIcon />, <GradeIcon />, <GradeIcon />, <GradeIcon />],
     price: "600р",
   },
   {
+    id: 6,
     img: latte,
     title: "Маккиато",
     grade: [
@@ -61,12 +67,14 @@ const goods = [
     price: "1200р",
   },
   {
+    id: 7,
     img: brevia,
     title: "Корретто",
     grade: [<GradeIcon />, <GradeIcon />, <GradeIcon />],
     price: "500р",
   },
   {
+    id: 8,
     img: fredo,
     title: "Мокко",
     grade: [
@@ -79,6 +87,7 @@ const goods = [
     price: "1200р",
   },
   {
+    id: 9,
     img: makima,
     title: "Романо",
     grade: [<GradeIcon />, <GradeIcon />, <GradeIcon />, <GradeIcon />],
