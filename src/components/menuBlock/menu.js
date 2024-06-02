@@ -4,11 +4,11 @@ import EmojiFoodBeverageIcon from "@mui/icons-material/EmojiFoodBeverage";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { FaCartShopping } from "react-icons/fa6";
 import { useState } from "react";
-// import { useCart } from "../globalShop/CartContext";
+import { useCart } from "../globalShop/CartContext";
 
 export default function MainMenu() {
   let [shopOpen, setShopOpen] = useState(false);
-  // const { cart, removeFromCart } = useCart();
+  const { cart, removeFromCart } = useCart();
   return (
     <header classname="header">
       <div classname="menu">
@@ -67,7 +67,33 @@ export default function MainMenu() {
                 </a>
               </li>
             </ul>
-            {shopOpen && <div className="shopCard"></div>}
+            {shopOpen && (
+              <div className="shopCard">
+                {cart.length === 0 ? (
+                  <p className="shopBinText">В корзине пока пусто</p>
+                ) : (
+                  cart.map((item) => (
+                    <div key={item.id} className="cartItem">
+                      <img
+                        src={item.img}
+                        alt={item.title}
+                        className="cartImg"
+                      />
+                      <div>
+                        <h4 className="tShopCart">{item.title}</h4>
+                        <p className="pShopCart">{item.price}</p>
+                        <button
+                          className="btnRemoveGoods"
+                          onClick={() => removeFromCart(item.id)}
+                        >
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  ))
+                )}
+              </div>
+            )}
           </nav>
         </div>
         <ScrollElem />

@@ -1,6 +1,7 @@
 import "./goodsCards.css";
 import CoffeeMakerIcon from "@mui/icons-material/CoffeeMaker";
 import GradeIcon from "@mui/icons-material/Grade";
+import { useCart } from "../globalShop/CartContext";
 import korreto from "../../imges/Goods/korretoGoods.jpg";
 import mokko from "../../imges/Goods/mokkoGoods.jpg";
 import romano from "../../imges/Goods/romanoGoods.jpg";
@@ -95,7 +96,7 @@ const goods = [
   },
 ];
 
-function Carta({ elem }) {
+function Carta({ elem, addToCart }) {
   return (
     <div className="Carta">
       <img className="imgGoods" src={elem.img} />
@@ -103,7 +104,7 @@ function Carta({ elem }) {
         <h2 className="textGoods">{elem.title}</h2>
         <p className="gradeGoods colorChangeGoods">{elem.grade}</p>
         <p className="priceGoods colorChangeGoods">{elem.price}</p>
-        <a className="addBtn" href="#">
+        <a className="addBtn" href="#" onClick={() => addToCart(elem)}>
           Добавить в корзину
         </a>
       </div>
@@ -112,8 +113,9 @@ function Carta({ elem }) {
 }
 
 export default function GoodsCards() {
-  const cardsJsx = goods.map((elem, i) => {
-    return <Carta elem={elem} />;
+  const { addToCart } = useCart();
+  const cardsJsx = goods.map((elem) => {
+    return <Carta key={elem.id} elem={elem} addToCart={addToCart} />;
   });
   return (
     <section className="cardsGoods">

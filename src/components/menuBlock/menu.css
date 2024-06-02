@@ -60,17 +60,54 @@ body {
 .profile {
   margin-right: 7px;
 }
+/* ---Shopping Cart Block CSS --- */
 .shopCard {
   position: absolute;
   top: 45px;
   width: 300px;
-  min-height: 100px;
-  background: #c39b73;
+  background: #252525;
   right: 0;
   z-index: 10;
   -webkit-box-shadow: -14px 13px 20px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -14px 13px 20px -4px rgba(0, 0, 0, 0.75);
   box-shadow: -14px 13px 20px -4px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 15px;
+}
+.shopBinText {
+  text-align: center;
+  color: #c39b73;
+  font-size: 18px;
+}
+.cartItem {
+  width: 100%;
+  margin-top: 7px;
+}
+.cartImg {
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+}
+.tShopCart {
+  color: #c39b73;
+  font-size: 20px;
+}
+.pShopCart {
+  color: #c39b73;
+  font-weight: bold;
+}
+.btnRemoveGoods {
+  margin-top: 7px;
+  padding: 4px 8px;
+  background-color: #c39b73;
+  color: #fff;
+  border-radius: 9px;
+  transition: all 0.4s;
+  font-size: 15px;
+}
+.btnRemoveGoods:hover {
+  background-color: white;
+  color: #252525;
 }
 .DopWindow {
   position: absolute;

@@ -1,4 +1,5 @@
 import "./App.css";
+import { CartProvider } from "./components/globalShop/CartContext";
 import MainMenu from "./components/menuBlock/menu";
 import ElemCoffeName from "./components/elemNameCoffe/elemNameCof";
 import IcnsBelow from "./components/iconMenuBelow/iconMenuBelow";
@@ -11,16 +12,18 @@ import FooterCoffe from "./components/footer/footerCoffe";
 
 export default function App() {
   return (
-    <div className="App">
-      <MainMenu />
-      <IcnsBelow />
-      <GoodsCards />
-      <SubscriveModule />
-      <CoffeVarieties />
-      <OurTeam />
-      <ElemCoffeName />
-      <Testimonials />
-      <FooterCoffe />
-    </div>
+    <CartProvider>
+      <div className="App">
+        <MainMenu />
+        <IcnsBelow />
+        <GoodsCards />
+        <SubscriveModule />
+        <CoffeVarieties />
+        <OurTeam />
+        <ElemCoffeName />
+        <Testimonials />
+        <FooterCoffe />
+      </div>
+    </CartProvider>
   );
 }
