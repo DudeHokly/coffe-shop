@@ -13,7 +13,7 @@ export default function SubscriveModule() {
         <ul className="subIconsBlock">
           <li>
             <a href="#" className="iconSub">
-              <SportsBasketballIcon style={{ fontSize: 35 }} />
+              <SportsBasketballIcon style={{ fontSize: 35 }} className="dude" />
             </a>
           </li>
           <li>
@@ -32,7 +32,7 @@ export default function SubscriveModule() {
             </a>
           </li>
           <li>
-            <a href="#" className="iconSub">
+            <a href="#" className="iconSub cakeIcon">
               <CakeIcon style={{ fontSize: 35 }} />
             </a>
           </li>

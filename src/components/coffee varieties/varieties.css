@@ -1,7 +1,7 @@
 .varieties {
 }
 .ContentVarities {
-  padding: 40px 0 50px;
+  padding: 40px 10px 50px;
 }
 .topPictureCoffe {
   overflow: hidden;
@@ -40,7 +40,6 @@
 }
 .blockCard {
   background-color: #252525;
-
   padding: 15px;
   margin: 20px;
   transform: scale(1.05);
@@ -85,4 +84,43 @@
 }
 .blockCard:nth-child(10) {
   grid-area: 4 / 3 / 5 / 4;
+}
+@media screen and (max-width: 880px) {
+  .pictureCoffeSpecialVarities {
+    height: 350px;
+  }
+  .textBelow1 {
+    font-size: 15px;
+  }
+  .blockCard {
+    padding: 10px;
+    margin: 15px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .pictureCoffeSpecialVarities {
+    height: 250px;
+  }
+  .pictureCoffeVarities {
+    height: 100px;
+  }
+  .textBelow1 {
+    font-size: 15px;
+  }
+  .blockCard {
+    padding: 8px;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .blockCard:nth-child(3) {
+    display: none;
+  }
+  .blockCard:nth-child(8) {
+    display: none;
+  }
+  .cardsVarities {
+    display: block;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

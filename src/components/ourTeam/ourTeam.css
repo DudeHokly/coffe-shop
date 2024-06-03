@@ -1,4 +1,5 @@
 .goodsText1 {
+  font-size: 32px;
   text-align: center;
 }
 .elemLine {
@@ -7,7 +8,7 @@
 }
 .ContentCard {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   padding-bottom: 50px;
 }
@@ -27,7 +28,7 @@
 }
 .photoBarista {
   height: 350px;
-  width: auto;
+  width: 100%;
 }
 .textBelowBarista {
   line-height: 170%;
@@ -60,4 +61,44 @@
 .iconTeam:hover {
   color: #c39b73;
   background: white;
+}
+@media screen and (max-width: 1230px) {
+  .Card:nth-last-of-type(3) {
+    display: none;
+  }
+  .ContentCard {
+    padding: 0 15px 50px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .photoBarista {
+    height: 320px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 799px) {
+  .Card:nth-last-of-type(2) {
+    display: none;
+  }
+  .ContentCard {
+    padding: 0 10px 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .goodsText1 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 510px) {
+  .Card:nth-last-of-type(4) {
+    display: none;
+  }
+  .ContentCard {
+    padding: 0 20px 30px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px;
+  }
+  .goodsText1 {
+    font-size: 24px;
+  }
 }

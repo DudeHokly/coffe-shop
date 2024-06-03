@@ -5,10 +5,22 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { FaCartShopping } from "react-icons/fa6";
 import { useState } from "react";
 import { useCart } from "../globalShop/CartContext";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function MainMenu() {
   let [shopOpen, setShopOpen] = useState(false);
   const { cart, removeFromCart } = useCart();
+
+  const [isMenu, setIsMenu] = useState(false);
+
+  function menuClick() {
+    setIsMenu(true);
+  }
+  function menuDisable() {
+    setIsMenu(false);
+  }
+
   return (
     <header classname="header">
       <div classname="menu">
@@ -95,6 +107,76 @@ export default function MainMenu() {
               </div>
             )}
           </nav>
+
+          <div
+            data-testid="menu-open"
+            className="contentBurger"
+            onClick={menuClick}
+          >
+            <a to="" className="defolt">
+              <i className="logoBurger">
+                <MenuIcon />
+              </i>
+            </a>
+          </div>
+
+          {isMenu ? (
+            <div data-testid="menu" className="MenuMobile">
+              <nav className="navMobile">
+                <ul className="navigationMobile">
+                  <li
+                    data-testid="menu-close"
+                    className="contentBurger"
+                    onClick={menuDisable}
+                  >
+                    <a href="#" className="defoltMobile">
+                      <i className="logoBurger">
+                        <CloseIcon />
+                      </i>
+                    </a>
+                  </li>
+                  <li className="blockNavGl">
+                    <a href="#" className="defoltMobile">
+                      <i className="icon-right-open"></i>
+                      Главная
+                    </a>
+                  </li>
+                  <li className="blockNav">
+                    <a href="#" className="defoltMobile">
+                      <i className="icon-right-open"></i>
+                      Напитки
+                    </a>
+                  </li>
+                  <li className="blockNav">
+                    <a href="#" className="defoltMobile">
+                      <i className="icon-right-open"></i>
+                      Эспрессо
+                    </a>
+                  </li>
+                  <li className="blockNav">
+                    <a href="#" className="defoltMobile">
+                      <i className="icon-right-open"></i>
+                      Больше
+                    </a>
+                  </li>
+                  <li className="blockNav">
+                    <a href="#" className="defoltMobile">
+                      <i className="icon-right-open"></i>
+                      Цены
+                    </a>
+                  </li>
+                  <li className="blockNav">
+                    <a href="#" className="defoltMobile">
+                      <i className="icon-right-open"></i>
+                      Блог
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
         <ScrollElem />
       </div>

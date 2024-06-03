@@ -1,20 +1,18 @@
 .cardsGoods {
-  padding: 45px 0;
+  padding: 45px 10px;
 }
 .padBlockGoods {
   text-align: center;
-}
-.goodsText1 {
-}
-.CardsGoodsJsx {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
 }
 .Carta {
   background-color: #252525;
   border-radius: 3px;
   padding-bottom: 10px;
+}
+.CardsGoodsJsx {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 .textRowGoods {
   padding: 20px 0;
@@ -25,7 +23,6 @@
   line-height: 185%;
 }
 .goodsText1 {
-  font-size: 34px;
   color: #252525;
   font-weight: 500;
 }
@@ -63,4 +60,31 @@
 .line {
   margin: 10px;
   border-top: 2px dotted #252525;
+}
+@media screen and (max-width: 820px) {
+  .textGoods {
+    font-size: 18px;
+  }
+  .priceGoods {
+    font-size: 18px;
+  }
+  .addBtn {
+    margin-top: 35px;
+    padding: 4px 14px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 620px) {
+  .Carta:nth-last-of-type(1) {
+    display: none;
+  }
+  .CardsGoodsJsx {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 390px) {
+  .CardsGoodsJsx {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

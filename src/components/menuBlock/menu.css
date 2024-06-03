@@ -199,3 +199,17 @@ body {
   background-color: white;
   color: #252525;
 }
+.MenuMobile {
+  display: none;
+}
+@media screen and (max-width: 867px) {
+  .MenuMobile {
+    display: block;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+  .navBlock {
+    display: none;
+  }
+}
