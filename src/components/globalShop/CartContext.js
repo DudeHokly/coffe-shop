@@ -8,7 +8,13 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
-    setCart([...cart, product]);
+    let isInArray = false;
+    cart.forEach((el) => {
+      if (el.id === product.id) isInArray = true;
+    });
+    if (!isInArray) {
+      setCart([...cart, product]);
+    }
   };
 
   const removeFromCart = (productId) => {

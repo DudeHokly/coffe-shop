@@ -67,7 +67,7 @@ body {
   width: 300px;
   background: #252525;
   right: 0;
-  z-index: 10;
+  z-index: 99;
   -webkit-box-shadow: -14px 13px 20px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -14px 13px 20px -4px rgba(0, 0, 0, 0.75);
   box-shadow: -14px 13px 20px -4px rgba(0, 0, 0, 0.75);
@@ -145,6 +145,7 @@ body {
 .slider {
   width: 100%;
   margin: 0 auto;
+  z-index: 98;
 }
 .elemCoffe {
   width: 100%;
@@ -161,6 +162,7 @@ body {
   height: 700px;
   background-size: contain;
   background-position: center;
+  background-size: cover;
   position: relative;
 }
 .textContainer {
@@ -170,6 +172,7 @@ body {
   left: 36%;
   transform: translate(-50%, -50%);
   color: white;
+  padding: 0 10px;
 }
 .scrollName {
   margin-bottom: 10px;
@@ -199,17 +202,82 @@ body {
   background-color: white;
   color: #252525;
 }
+.logoBurger {
+  display: none;
+}
 .MenuMobile {
   display: none;
 }
+.closeIcon {
+}
+@media screen and (max-width: 998px) {
+  .scrollName {
+    font-size: 70px;
+  }
+  .titleScrlolElemMenu {
+    font-size: 28px;
+  }
+  .title2ScrolElemMenu {
+    font-size: 18px;
+  }
+}
 @media screen and (max-width: 867px) {
+  .NavMenuBlock {
+    padding: 20px 10px 10px;
+    justify-content: space-between;
+  }
   .MenuMobile {
     display: block;
     position: fixed;
-    width: 100%;
+    width: 50%;
     top: 0;
+    right: 0;
+    z-index: 100;
   }
   .navBlock {
     display: none;
+  }
+  .logoBurger {
+    display: block;
+    right: 0;
+  }
+  .blockNav {
+    color: white;
+  }
+  .navMobile {
+    border: 2px solid #c39b73;
+    border-radius: 10px;
+    padding: 70px 60px;
+    font-size: 35px;
+    background-color: #252525;
+    box-shadow: 0 0 10px;
+  }
+  .blockNavGl {
+    font-size: 47px;
+    font-weight: 600;
+    color: #c39b73;
+  }
+}
+@media screen and (max-width: 510px) {
+  .imgScrollElem {
+    height: 500px;
+  }
+  .textContainer {
+    top: 46%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+  }
+  .scrollName {
+    font-size: 55px;
+  }
+  .titleScrlolElemMenu {
+    font-size: 22px;
+  }
+  .title2ScrolElemMenu {
+    font-size: 16px;
+  }
+  .btnShop {
+    padding: 14px 36px;
+    font-size: 16px;
   }
 }

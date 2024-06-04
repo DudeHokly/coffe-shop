@@ -32,9 +32,6 @@ export default function ScrollElem() {
             <div
               style={{
                 backgroundImage: `url(${coffeeSlider.images[index - 1]})`,
-                width: "100%",
-                height: 700,
-                backgroundSize: "cover",
               }}
               className="imgScrollElem"
             >

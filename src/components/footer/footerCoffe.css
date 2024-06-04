@@ -109,6 +109,11 @@
     transform: translateY(20px);
   }
 }
+@media screen and (max-width: 1500px) {
+  .kursan {
+    display: none;
+  }
+}
 @media screen and (max-width: 990px) {
   .padAbout2 {
     display: none;

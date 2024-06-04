@@ -115,7 +115,7 @@ export default function MainMenu() {
           >
             <a to="" className="defolt">
               <i className="logoBurger">
-                <MenuIcon />
+                <MenuIcon style={{ fontSize: 60 }} />
               </i>
             </a>
           </div>
@@ -130,8 +130,8 @@ export default function MainMenu() {
                     onClick={menuDisable}
                   >
                     <a href="#" className="defoltMobile">
-                      <i className="logoBurger">
-                        <CloseIcon />
+                      <i className="closeIcon">
+                        <CloseIcon style={{ fontSize: 70 }} />
                       </i>
                     </a>
                   </li>
