@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 export default function MainMenu() {
+  let summa = 0;
   let [shopOpen, setShopOpen] = useState(false);
   const { cart, removeFromCart } = useCart();
 
@@ -91,7 +92,7 @@ export default function MainMenu() {
                         alt={item.title}
                         className="cartImg"
                       />
-                      <div>
+                      <div className="shoppingCartdiv">
                         <h4 className="tShopCart">{item.title}</h4>
                         <p className="pShopCart">{item.price}</p>
                         <button
@@ -100,6 +101,9 @@ export default function MainMenu() {
                         >
                           Удалить
                         </button>
+                        <p className="sumShoppingCart">
+                          Сумма к оплате: {summa}p
+                        </p>
                       </div>
                     </div>
                   ))

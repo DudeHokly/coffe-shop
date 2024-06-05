@@ -210,6 +210,11 @@ body {
 }
 .closeIcon {
 }
+.sumShoppingCart {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #c39b73;
+}
 @media screen and (max-width: 998px) {
   .scrollName {
     font-size: 70px;
