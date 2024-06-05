@@ -9,9 +9,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 export default function MainMenu() {
-  let summa = 0;
-  let [shopOpen, setShopOpen] = useState(false);
-  const { cart, removeFromCart } = useCart();
+  const [shopOpen, setShopOpen] = useState(false);
+  const { cart, removeFromCart, cartCount, cartSum } = useCart();
 
   const [isMenu, setIsMenu] = useState(false);
 
@@ -74,8 +73,9 @@ export default function MainMenu() {
                     <FaCartShopping
                       className={`shop ${shopOpen && "active"}`}
                       style={{ fontSize: 27 }}
-                      onClick={() => setShopOpen((shopOpen = !shopOpen))}
+                      onClick={() => setShopOpen(!shopOpen)}
                     />
+                    <span className="cartCount">{cartCount}</span>
                   </i>
                 </a>
               </li>
@@ -95,19 +95,22 @@ export default function MainMenu() {
                       <div className="shoppingCartdiv">
                         <h4 className="tShopCart">{item.title}</h4>
                         <p className="pShopCart">{item.price}</p>
+                        <p className="quantityShopCart">
+                          Количество: {item.quantity}
+                        </p>
                         <button
                           className="btnRemoveGoods"
                           onClick={() => removeFromCart(item.id)}
                         >
                           Удалить
                         </button>
-                        <p className="sumShoppingCart">
-                          Сумма к оплате: {summa}p
-                        </p>
                       </div>
                     </div>
                   ))
                 )}
+                <p className="sumShoppingCart">
+                  Сумма к оплате: {cartSum} pуб.
+                </p>
               </div>
             )}
           </nav>

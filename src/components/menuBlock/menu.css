@@ -211,8 +211,13 @@ body {
 .closeIcon {
 }
 .sumShoppingCart {
+  text-align: center;
   font-size: 18px;
   margin-top: 20px;
+  color: #c39b73;
+}
+.quantityShopCart {
+  font-size: 17px;
   color: #c39b73;
 }
 @media screen and (max-width: 998px) {
