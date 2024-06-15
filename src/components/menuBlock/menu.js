@@ -94,7 +94,7 @@ export default function MainMenu() {
                       />
                       <div className="shoppingCartdiv">
                         <h4 className="tShopCart">{item.title}</h4>
-                        <p className="pShopCart">{item.price}</p>
+                        <p className="pShopCart">{item.price} руб.</p>
                         <p className="quantityShopCart">
                           Количество: {item.quantity}
                         </p>

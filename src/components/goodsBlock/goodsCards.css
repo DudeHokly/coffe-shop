@@ -48,6 +48,7 @@
   border-radius: 7px;
   transition: all 0.6s;
   border: 1px solid #c39b73;
+  cursor: pointer;
 }
 .addBtn:hover {
   background-color: #252525;

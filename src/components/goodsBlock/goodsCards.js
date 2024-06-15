@@ -104,7 +104,7 @@ function Carta({ elem, addToCart }) {
         <h2 className="textGoods">{elem.title}</h2>
         <p className="gradeGoods colorChangeGoods">{elem.grade}</p>
         <p className="priceGoods colorChangeGoods">{elem.price}</p>
-        <a className="addBtn" href="#" onClick={() => addToCart(elem)}>
+        <a className="addBtn" onClick={() => addToCart(elem)}>
           Добавить в корзину
         </a>
       </div>
