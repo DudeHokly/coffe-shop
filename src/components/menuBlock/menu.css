@@ -49,13 +49,55 @@ body {
 .elemMainPage:not(:last-child) {
   margin: 0 27px 0 0;
 }
+/* Стили для анимации подменю */
 .elemMainPage {
   font-size: 18px;
-  transition: all 0.4s;
+  position: relative;
+  transition: color 0.6s ease;
 }
-.elemMainPage:hover,
-.shop.active {
+.elemMainPage:hover > a {
   color: white;
+  text-decoration: underline;
+}
+.elemMainPage a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+.elemMainPage:hover > ul {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.elemMainPage:hover > .DopWindow {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+/* Подменю */
+.DopWindow {
+  position: absolute;
+  left: 0;
+  background-color: #252525;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 99;
+}
+.DopElemMainPage {
+  padding: 8px 20px;
+  color: #c39b73;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.DopElemMainPage:hover {
+  background-color: #c39b73;
+  color: #252525;
+  cursor: pointer;
 }
 .profile {
   margin-right: 7px;
@@ -108,28 +150,6 @@ body {
 .btnRemoveGoods:hover {
   background-color: white;
   color: #252525;
-}
-.DopWindow {
-  position: absolute;
-  text-align: center;
-  display: none;
-  padding: 8px;
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-}
-.DopWindow:hover {
-  transition: all 0.6s;
-  border-radius: 12px;
-  background-color: #252525;
-  position: absolute;
-  z-index: 10;
-  display: block;
-  color: #c39b73;
-}
-.elemMainPage:hover > ul {
-  transition: all 0.6s;
-  display: block;
 }
 .iconsMainPage {
   display: flex;

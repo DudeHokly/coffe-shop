@@ -121,7 +121,7 @@ export default function FooterCoffe() {
       </div>
       <div className="BottomCopiright">
         <div className="margCopiraight">
-          <p>Copyright 2024 GymProject Все права защищены</p>
+          <p>© {new Date().getFullYear()} CoffeShop . Все права защищены.</p>
         </div>
       </div>
     </section>

@@ -8,18 +8,46 @@ import { useCart } from "../globalShop/CartContext";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
+const NAV_ITEMS = [
+  { label: "ГЛАВНАЯ", link: "#" },
+  {
+    label: "НАПИТКИ",
+    link: "#",
+    subItems: ["Цены", "Больше"],
+  },
+  {
+    label: "ЭСПРЕССО",
+    link: "#",
+    subItems: ["Холодный", "Горячий", "Теплый"],
+  },
+  {
+    label: "БОЛЬШЕ",
+    link: "#",
+    subItems: ["Цены", "Больше"],
+  },
+  { label: "БЛОГ", link: "#" },
+];
+
+const NavItem = ({ label, link, subItems }) => (
+  <li className="elemMainPage">
+    <a href={link}>{label}</a>
+    {subItems && (
+      <ul className="DopWindow">
+        {subItems.map((item, index) => (
+          <li key={index} className="DopElemMainPage">
+            {item}
+          </li>
+        ))}
+      </ul>
+    )}
+  </li>
+);
+
 export default function MainMenu() {
   const [shopOpen, setShopOpen] = useState(false);
   const { cart, removeFromCart, cartCount, cartSum } = useCart();
 
-  const [isMenu, setIsMenu] = useState(false);
-
-  function menuClick() {
-    setIsMenu(true);
-  }
-  function menuDisable() {
-    setIsMenu(false);
-  }
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header classname="header">
@@ -34,49 +62,20 @@ export default function MainMenu() {
           </figure>
           <nav className="navBlock">
             <ul className="NavMenu">
-              <li className="elemMainPage">
-                <a href="#">ГЛАВНАЯ</a>
-              </li>
-              <li className="elemMainPage">
-                <a href="#">НАПИТКИ</a>
-                <ul className="DopWindow">
-                  <li className="DopElemMainPage">Цены</li>
-                  <li className="DopElemMainPage">Больше</li>
-                </ul>
-              </li>
-              <li className="elemMainPage">
-                <a href="#">ЭСПРЕССО</a>
-                <ul className="DopWindow">
-                  <li className="DopElemMainPage">Холодный</li>
-                  <li className="DopElemMainPage">Горячий</li>
-                  <li className="DopElemMainPage">Теплый</li>
-                </ul>
-              </li>
-              <li className="elemMainPage">
-                <a href="#">БОЛЬШЕ</a>
-                <ul className="DopWindow">
-                  <li className="DopElemMainPage">Цены</li>
-                  <li className="DopElemMainPage">Больше</li>
-                </ul>
-              </li>
-              <li className="elemMainPage">
-                <a href="#">БЛОГ</a>
-              </li>
+              {NAV_ITEMS.map((item, index) => (
+                <NavItem key={index} {...item} />
+              ))}
               <li className="iconsMainPage">
                 <a href="#">
-                  <i className="profile">
-                    <AccountCircleIcon style={{ fontSize: 29 }} />
-                  </i>
+                  <AccountCircleIcon style={{ fontSize: 29 }} />
                 </a>
                 <a href="#">
-                  <i className="bin">
-                    <FaCartShopping
-                      className={`shop ${shopOpen && "active"}`}
-                      style={{ fontSize: 27 }}
-                      onClick={() => setShopOpen(!shopOpen)}
-                    />
-                    <span className="cartCount">{cartCount}</span>
-                  </i>
+                  <FaCartShopping
+                    className={`shop ${shopOpen ? "active" : ""}`}
+                    style={{ fontSize: 27 }}
+                    onClick={() => setShopOpen((prev) => !prev)}
+                  />
+                  <span className="cartCount">{cartCount}</span>
                 </a>
               </li>
             </ul>
@@ -118,7 +117,7 @@ export default function MainMenu() {
           <div
             data-testid="menu-open"
             className="contentBurger"
-            onClick={menuClick}
+            onClick={() => setIsMenuOpen(true)}
           >
             <a to="" className="defolt">
               <i className="logoBurger">
@@ -127,62 +126,24 @@ export default function MainMenu() {
             </a>
           </div>
 
-          {isMenu ? (
-            <div data-testid="menu" className="MenuMobile">
+          {isMenuOpen && (
+            <div className="MenuMobile">
               <nav className="navMobile">
                 <ul className="navigationMobile">
                   <li
-                    data-testid="menu-close"
                     className="contentBurger"
-                    onClick={menuDisable}
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    <a href="#" className="defoltMobile">
-                      <i className="closeIcon">
-                        <CloseIcon style={{ fontSize: 70 }} />
-                      </i>
-                    </a>
+                    <CloseIcon style={{ fontSize: 70 }} />
                   </li>
-                  <li className="blockNavGl">
-                    <a href="#" className="defoltMobile">
-                      <i className="icon-right-open"></i>
-                      Главная
-                    </a>
-                  </li>
-                  <li className="blockNav">
-                    <a href="#" className="defoltMobile">
-                      <i className="icon-right-open"></i>
-                      Напитки
-                    </a>
-                  </li>
-                  <li className="blockNav">
-                    <a href="#" className="defoltMobile">
-                      <i className="icon-right-open"></i>
-                      Эспрессо
-                    </a>
-                  </li>
-                  <li className="blockNav">
-                    <a href="#" className="defoltMobile">
-                      <i className="icon-right-open"></i>
-                      Больше
-                    </a>
-                  </li>
-                  <li className="blockNav">
-                    <a href="#" className="defoltMobile">
-                      <i className="icon-right-open"></i>
-                      Цены
-                    </a>
-                  </li>
-                  <li className="blockNav">
-                    <a href="#" className="defoltMobile">
-                      <i className="icon-right-open"></i>
-                      Блог
-                    </a>
-                  </li>
+                  {NAV_ITEMS.map((item, index) => (
+                    <li key={index} className="blockNav">
+                      <a href={item.link}>{item.label}</a>
+                    </li>
+                  ))}
                 </ul>
               </nav>
             </div>
-          ) : (
-            ""
           )}
         </div>
         <ScrollElem />
